@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spatial Analysis</title>
-    
-    
-    <script type="module" crossorigin src="./assets/main-20fa2902.js"></script>
-    <link rel="stylesheet" href="./assets/index-0975db76.css">
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spatial Analysis</title>
+		
+		
+		<script type="module" crossorigin src="./assets/main-572b0350.js"></script>
+		<link rel="stylesheet" href="./assets/index-9b65665c.css">
+	</head>
 
-  <body>
-    <div class="flex flex-col gap-2 absolute z-10 top-3 left-4 text-white">
-      <button
-        id="btn-start"
-        class="btn-points"
-        data-point-type="start"
-        data-active="false"
-      >
-        Start
-      </button>
-      <button
-        id="btn-finish"
-        class="btn-points"
-        data-point-type="finish"
-        data-active="false"
-      >
-        Finish
-      </button>
-      <button
-        id="btn-draw-line"
-        class="btn-points"
-        data-point-type="draw"
-        disabled
-      >
-        Draw
-      </button>
-      <button id="btn-reset" class="btn-points" data-point-type="reset">
-        Reset
-      </button>
-    </div>
-    <div id="mapContainer"></div>
-  </body>
+	<body>
+		<div
+			class="nm:hidden h-screen w-screen flex items-center justify-center font-medium text-xl text-center"
+		>
+			Please buy new and bigger device :(
+		</div>
+		<div class="nm:flex flex-col gap-2 z-10 absolute bottom-9 w-full px-2 hidden">
+			<div class="flex gap-2">
+				<div class="bg-red-400 h-full py-2 flex items-center gap-2 rounded-lg px-2 shadow grow">
+					<input
+						class="flex-1 pl-2 rounded-sm"
+						type="number"
+            id="text-tolerance"
+						value="0.0033"
+						min="0"
+						max="1"
+					/>
+					<!-- <label id="label-slider-tolerance" for="slider-tolerance">0.0033</label> -->
+					<input
+						class="flex-[3]"
+						type="range"
+						min="0"
+						max="1"
+						value="0.0033"
+						step="0.0001"
+						id="slider-tolerance"
+					/>
+				</div>
+				<button id="btn-buffer" class="btn-points" data-point-type="buffer" disabled>Buffer</button>
+			</div>
+			<div class="flex justify-between items-center gap-2">
+				<div>
+					<button id="btn-start" class="btn-points" data-point-type="start" data-active="false">
+						Start
+					</button>
+					<button id="btn-finish" class="btn-points" data-point-type="finish" data-active="false">
+						Finish
+					</button>
+				</div>
+				<div>
+					<button id="btn-draw-line" class="btn-points" data-point-type="draw" disabled>
+						Draw
+					</button>
+					<button id="btn-reset" class="btn-points" data-point-type="reset">Reset</button>
+				</div>
+			</div>
+		</div>
+		<div class="hidden nm:block" id="mapContainer"></div>
+	</body>
 </html>
