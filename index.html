@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Client side spatial analysis with Mapbox GL JS and Turf.js"
+    />
     <title>Spatial Analysis</title>
     <link rel="icon" type="image/png" href="./favicon.ico" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     
     
-    <script type="module" crossorigin src="./assets/main-fbfc78d3.js"></script>
+    <script type="module" crossorigin src="./assets/main-9b645570.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="./assets/index-709611de.css">
+    <link rel="stylesheet" href="./assets/index-279a3e9e.css">
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -26,26 +30,42 @@
 
     gtag("config", "G-CPQPQ6KF1Z");
   </script>
-  <body class="bg-gray-100 p-6">
+  <body class="bg-gray-100 p-6 select-none">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-2xl font-bold mb-4">Catalog</h1>
-      <div class="grid grid-cols-3 gap-3">
-        <div class="btn-square">
+      <div class="w-full flex justify-between mb-4">
+        <h1 class="text-2xl font-bold">Catalog</h1>
+        <a href="https://github.com/berkayoruc" target="_blank"
+          ><img
+            src="./github-mark.png"
+            alt="github-logo"
+            width="32"
+            height="32"
+        /></a>
+      </div>
+      <div class="grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-3 gap-3">
+        <button
+          id="btn-buffer-simplify"
+          class="border border-slate-700 hover:bg-slate-700 hover:text-white rounded-lg grow text-lg font-bold aspect-video min-w-min"
+        >
+          Buffer&Simplify
+        </button>
+        <button
+          id="btn-draw-circle"
+          class="border border-slate-700 hover:bg-slate-700 hover:text-white rounded-lg grow text-lg font-bold aspect-video min-w-min"
+        >
+          Draw Circle
+        </button>
+        <!-- <div class="btn-square">
           <button
-            id="btn-buffer-simplify"
+            
             class="p-12 border border-gray-300 bg-gray-100 text-gray-800 rounded hover:bg-gray-200"
           >
             <div class="text-lg font-bold">Buffer&Simplify</div>
           </button>
         </div>
         <div class="btn-square">
-          <button
-            id="btn-draw-circle"
-            class="p-12 border border-gray-300 bg-gray-100 text-gray-800 rounded hover:bg-gray-200"
-          >
-            <div class="text-lg font-bold">Draw Circle</div>
-          </button>
-        </div>
+          
+        </div> -->
       </div>
     </div>
   </body>
