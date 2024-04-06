@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Draw Circle</title>
+    <title>Custom BBOX</title>
     <link rel="icon" type="image/png" href="../favicon.ico" />
     <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
     <link
@@ -12,10 +12,9 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/draw-circle-28637cef.js"></script>
+    <script type="module" crossorigin src="../assets/custom-bbox-e01356f7.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="../assets/mapbox-gl-2303e4d8.js">
-    <link rel="modulepreload" crossorigin href="../assets/index-c8fdaf1b.js">
     <link rel="stylesheet" href="../assets/mapbox-gl-22a139a9.css">
     <link rel="stylesheet" href="../assets/index-441efd58.css">
   </head>
@@ -78,23 +77,5 @@
       <span class="material-symbols-outlined">arrow_back</span>
     </div>
     <div id="mapContainer"></div>
-    <div
-      class="z-10 absolute left-2 bottom-9 p-2 bg-black bg-opacity-25 backdrop-blur rounded-md"
-    >
-      <div
-        id="label-radius"
-        class="bg-white rounded-md text-purple-800 font-medium text-base px-2 mb-2"
-      >
-        Radius: -
-      </div>
-      <input
-        id="input-radius"
-        type="range"
-        min="1"
-        max="10"
-        step="0.01"
-        value="4"
-      />
-    </div>
   </body>
 </html>

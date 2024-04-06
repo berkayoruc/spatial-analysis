@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-3cfb730f.js";const t=document.getElementById("btn-buffer-simplify");t.addEventListener("click",e=>{window.location.href="./simplify/"});const n=document.getElementById("btn-draw-circle");n.addEventListener("click",e=>{window.location.href="./draw-circle/"});
