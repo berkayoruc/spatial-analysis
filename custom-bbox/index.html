@@ -12,10 +12,10 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/custom-bbox-e01356f7.js"></script>
+    <script type="module" crossorigin src="../assets/custom-bbox-68d31194.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="modulepreload" crossorigin href="../assets/mapbox-gl-2303e4d8.js">
-    <link rel="stylesheet" href="../assets/mapbox-gl-22a139a9.css">
+    <link rel="modulepreload" crossorigin href="../assets/index-4df36c28.js">
+    <link rel="stylesheet" href="../assets/index-22a139a9.css">
     <link rel="stylesheet" href="../assets/index-441efd58.css">
   </head>
   <!-- Yandex.Metrika counter -->
@@ -76,6 +76,25 @@
     >
       <span class="material-symbols-outlined">arrow_back</span>
     </div>
+    <ul
+      style="cursor: none"
+      class="right-2 z-10 absolute top-3 p-2 bg-black bg-opacity-50 backdrop-blur rounded-md cursor-none select-none justify-center items-start flex flex-col text-xs gap-2 text-white"
+    >
+      <li class="flex gap-2">
+        <div
+          class="h-2 border border-white rounded-sm"
+          style="width: 16px; background: red"
+        ></div>
+        <span>Map BBOX</span>
+      </li>
+      <li class="flex gap-2">
+        <div
+          class="h-2 border border-white rounded-sm"
+          style="width: 16px; background: purple"
+        ></div>
+        <span>Custom BBOX</span>
+      </li>
+    </ul>
     <div id="mapContainer"></div>
   </body>
 </html>
