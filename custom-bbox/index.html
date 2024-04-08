@@ -12,11 +12,11 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/custom-bbox-a66389d7.js"></script>
+    <script type="module" crossorigin src="../assets/custom-bbox-44b8e40a.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="../assets/index-65bf395c.js">
     <link rel="stylesheet" href="../assets/index-22a139a9.css">
-    <link rel="stylesheet" href="../assets/index-441efd58.css">
+    <link rel="stylesheet" href="../assets/index-4eff3c1b.css">
   </head>
   <!-- Yandex.Metrika counter -->
   <!-- <script type="text/javascript">
@@ -76,11 +76,23 @@
     >
       <span class="material-symbols-outlined">arrow_back</span>
     </div>
+    <div
+      style="bottom: 24px; left: 8px"
+      class="absolute z-10 p-2 bg-black bg-opacity-50 backdrop-blur rounded-md text-white cursor-pointer select-none"
+    >
+      Station count: <span id="stationCount">0</span>
+    </div>
     <ul
       style="cursor: none"
       class="right-2 z-10 absolute top-3 p-2 bg-black bg-opacity-50 backdrop-blur rounded-md cursor-none select-none justify-center items-start flex flex-col text-xs gap-2 text-white"
     >
       <li class="flex gap-2">
+        <input
+          type="checkbox"
+          id="chkMapBbox"
+          class="h-4 w-4 cursor-pointer"
+          checked
+        />
         <div
           class="h-2 border border-white rounded-sm"
           style="width: 16px; background: red"
@@ -88,13 +100,25 @@
         <span>Map BBOX</span>
       </li>
       <li class="flex gap-2">
+        <input
+          type="checkbox"
+          id="chkCustomBbox"
+          class="h-4 w-4 cursor-pointer"
+          checked
+        />
         <div
           class="h-2 border border-white rounded-sm"
-          style="width: 16px; background: purple"
+          style="width: 16px; background: blue"
         ></div>
         <span>Custom BBOX</span>
       </li>
       <li class="flex gap-2">
+        <input
+          type="checkbox"
+          id="chkUnprojectBbox"
+          class="h-4 w-4 cursor-pointer"
+          checked
+        />
         <div
           class="h-2 border border-white rounded-sm"
           style="width: 16px; background: green"
@@ -102,9 +126,15 @@
         <span>Unproject BBOX</span>
       </li>
       <li class="flex gap-2">
+        <input
+          type="checkbox"
+          id="chkStations"
+          class="h-4 w-4 cursor-pointer"
+          checked
+        />
         <div
           class="h-2 border border-white"
-          style="width: 16px; background: #B42222; border-radius: 100%;"
+          style="width: 16px; background: #b42222; border-radius: 100%"
         ></div>
         <span>Stations</span>
       </li>
@@ -116,6 +146,21 @@
         <span>Unproject to BBOX</span>
       </li> -->
     </ul>
+    <button
+      id="dropdownDefaultButton"
+      class="dropdownBtn"
+      type="button"
+      data-bbox="unproject"
+    >
+      Unproject BBOX
+    </button>
+    <div id="dropdown" style="display: none">
+      <ul class="p-2" aria-labelledby="dropdownDefaultButton">
+        <li data-bbox="map">Map BBOX</li>
+        <li data-bbox="custom">Custom BBOX</li>
+        <li data-bbox="unproject">Unproject BBOX</li>
+      </ul>
+    </div>
     <div id="mapContainer"></div>
   </body>
 </html>
