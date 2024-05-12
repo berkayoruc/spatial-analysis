@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";import{a as o,i as r,t as a}from"./index-43b56403.js";const s=(t,e)=>r(t)?a(t,e,"pk.eyJ1Ijoib3J1Y2JlIiwiYSI6ImNsbTZuZGxrZjBoN3czamxnM2V6aHBiZGEifQ.Fami0mGh65buxFjfJ0Ppjg"):{url:t};new o.Map({container:"mapContainer",style:"mapbox://styles/mapbox/streets-v12",zoom:10,center:[29,41.015137],transformRequest:s,cooperativeGestures:!0});
