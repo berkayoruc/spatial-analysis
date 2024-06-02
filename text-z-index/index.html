@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static Map</title>
+    <title>Text Z Index</title>
     <link rel="icon" type="image/png" href="../favicon.ico" />
     <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
     <link
@@ -12,11 +12,11 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/static-map-6cad960b.js"></script>
+    <script type="module" crossorigin src="../assets/text-z-index-cdc87962.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="../assets/index-43b56403.js">
     <link rel="stylesheet" href="../assets/index-7211f511.css">
-    <link rel="stylesheet" href="../assets/index-9db7d398.css">
+    <link rel="stylesheet" href="../assets/index-63ff0c36.css">
   </head>
   <!-- Yandex.Metrika counter -->
   <!-- <script type="text/javascript">
@@ -76,8 +76,27 @@
     >
       <span class="material-symbols-outlined">arrow_back</span>
     </div>
-    <div class="flex items-center justify-center h-100svh w-100svw">
-      <div id="mapContainer"></div>
+    <div id="mapContainer"></div>
+    <div
+      class="absolute left-2 bottom-2 backdrop-blur bg-black bg-opacity-50 p-2 rounded-md flex flex-col gap-1 select-none"
+    >
+      <button
+        id="btn-plus-text-z-index"
+        class="p-2 w-8 h-8 bg-white bg-opacity-95 rounded-sm flex items-center justify-center"
+      >
+        <span class="material-symbols-outlined font-medium">arrow_upward</span>
+      </button>
+      <span
+        id="span-text-z-index"
+        class="bg-white font-black text-lg text-center rounded-sm"
+        >5</span
+      >
+      <button
+        id="btn-minus-text-z-index"
+        class="p-2 w-8 h-8 bg-white bg-opacity-95 rounded-sm flex items-center justify-center"
+      >
+        <span class="material-symbols-outlined font-medium">arrow_downward</span>
+      </button>
     </div>
   </body>
 </html>
